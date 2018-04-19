@@ -13,8 +13,8 @@ class StudentsController < ApplicationController
 
   def create
     binding.pry
-    @post = Post.create(params)
-    @post.save
+    @student = Student.create(first_name: params[:first_name])
+    @student.save
     redirect_to ''
   end
 
