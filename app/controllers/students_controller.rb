@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+
   def index
     @students = Student.all
   end
@@ -12,6 +12,10 @@ class StudentsController < ApplicationController
   end
 
   def create
+    binding.pry
+    @post = Post.create(params)
+    @post.save
+    redirect_to ''
   end
 
 end
